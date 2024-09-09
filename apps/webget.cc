@@ -4,13 +4,25 @@
 #include <iostream>
 #include <span>
 #include <string>
+#include <format>
 
 using namespace std;
 
 void get_URL( const string& host, const string& path )
 {
   cerr << "Function called: get_URL(" << host << ", " << path << ")\n";
-  cerr << "Warning: get_URL() has not been implemented yet.\n";
+  TCPSocket sock{};
+  Address address{host, "http"};
+  sock.connect( address );
+  string request = format("GET {} HTTP/1.1\r\nHost:{}\r\nConnection:close\r\n\r\n", path, host);
+  sock.write(request);
+  string response;
+  response.reserve(1024);
+  do {
+    response = "";
+    sock.read( response );
+    cout << response;
+  } while(response != "");
 }
 
 int main( int argc, char* argv[] )
@@ -30,7 +42,6 @@ int main( int argc, char* argv[] )
       cerr << "\tExample: " << args.front() << " stanford.edu /class/cs144\n";
       return EXIT_FAILURE;
     }
-
     // Get the command-line arguments.
     const string host { args[1] };
     const string path { args[2] };

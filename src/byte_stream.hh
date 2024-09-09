@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <string>
 #include <string_view>
+#include <vector>
 
 class Reader;
 class Writer;
@@ -25,6 +26,10 @@ protected:
   // Please add any additional state to the ByteStream here, and not to the Writer and Reader interfaces.
   uint64_t capacity_;
   bool error_ {};
+  bool closed_ { false };
+  uint64_t count_pushed {};
+  uint64_t count_popped {};
+  std::string buffer_ {} ; // 用于存储结果，每个位置都是一个term，与下面的应当是对应的
 };
 
 class Writer : public ByteStream
