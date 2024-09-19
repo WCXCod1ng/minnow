@@ -5,6 +5,7 @@
 #include "tcp_receiver.hh"
 #include "tcp_receiver_message.hh"
 
+#include <iostream>
 #include <optional>
 #include <sstream>
 #include <utility>
@@ -106,7 +107,9 @@ struct ExpectAcknoBetween : public Expectation<TCPReceiver>
     const uint64_t ackno_absolute = ackno.value().unwrap( isn_, checkpoint_ );
 
     if ( ackno_absolute < min_ or ackno_absolute > max_ ) {
-      throw ExpectationViolation( "ackno outside expected range" );
+      std::cout << ackno.value() << std::endl;
+      std::cout << ackno_absolute << std::endl;
+      throw ExpectationViolation( "ackno outside expected range:" );
     }
   }
 };

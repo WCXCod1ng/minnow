@@ -8,7 +8,7 @@ class TCPReceiver
 {
 public:
   // Construct with given Reassembler
-  explicit TCPReceiver( Reassembler&& reassembler ) : reassembler_( std::move( reassembler ) ) {}
+  explicit TCPReceiver( Reassembler&& reassembler ) : reassembler_( std::move( reassembler ) ){}
 
   /*
    * The TCPReceiver receives TCPSenderMessages, inserting their payload into the Reassembler
@@ -27,4 +27,8 @@ public:
 
 private:
   Reassembler reassembler_;
+  std::optional<Wrap32> zero_point_{};
+  std::optional<Wrap32> ackno_{};
+  bool RST_ {false};
+  bool SYN_ {false};
 };

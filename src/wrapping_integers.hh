@@ -1,12 +1,15 @@
 #pragma once
 
 #include <cstdint>
+#include <climits>
 
 /*
  * The Wrap32 type represents a 32-bit unsigned integer that:
  *    - starts at an arbitrary "zero point" (initial value), and
  *    - wraps back to zero when it reaches 2^32 - 1.
  */
+
+
 
 class Wrap32
 {
@@ -25,9 +28,10 @@ public:
    */
   uint64_t unwrap( Wrap32 zero_point, uint64_t checkpoint ) const;
 
-  Wrap32 operator+( uint32_t n ) const { return Wrap32 { raw_value_ + n }; }
+  Wrap32 operator+( uint32_t n ) const { return Wrap32 { raw_value_ + n }; } // 由于是uint32_t，因此自动存在取模运算
   bool operator==( const Wrap32& other ) const { return raw_value_ == other.raw_value_; }
 
 protected:
   uint32_t raw_value_ {};
+  static constexpr uint64_t mod = (1ULL << 32); // 用于取模的基
 };
