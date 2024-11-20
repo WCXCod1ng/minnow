@@ -1,0 +1,783 @@
+Start testing: Sep 23 15:13 CST
+----------------------------------------------------------
+1/39 Testing: compile with bug-checkers
+1/39 Test: compile with bug-checkers
+Command: "/usr/bin/cmake" "--build" "/tmp/minnow/cmake-build-debug-docker" "-t" "functionality_testing" "webget"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"compile with bug-checkers" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+[  0%] Built target minnow_testing_debug
+[  6%] Built target util_debug
+[ 11%] Built target minnow_debug
+[ 12%] Built target router
+[ 14%] Built target minnow_testing_sanitized
+[ 20%] Built target util_sanitized
+[ 26%] Built target minnow_sanitized
+[ 28%] Built target byte_stream_basics_sanitized
+[ 28%] Built target byte_stream_basics
+[ 29%] Built target byte_stream_capacity_sanitized
+[ 30%] Built target byte_stream_capacity
+[ 32%] Built target byte_stream_one_write_sanitized
+[ 32%] Built target byte_stream_one_write
+[ 33%] Built target byte_stream_two_writes_sanitized
+[ 34%] Built target byte_stream_two_writes
+[ 35%] Built target byte_stream_many_writes_sanitized
+[ 37%] Built target byte_stream_many_writes
+[ 38%] Built target byte_stream_stress_test_sanitized
+[ 39%] Built target byte_stream_stress_test
+[ 41%] Built target reassembler_single_sanitized
+[ 41%] Built target reassembler_single
+[ 42%] Built target reassembler_cap_sanitized
+[ 43%] Built target reassembler_cap
+[ 44%] Built target reassembler_seq_sanitized
+[ 46%] Built target reassembler_seq
+[ 46%] Built target reassembler_dup_sanitized
+[ 47%] Built target reassembler_dup
+[ 48%] Built target reassembler_holes_sanitized
+[ 50%] Built target reassembler_holes
+[ 51%] Built target reassembler_overlapping_sanitized
+[ 52%] Built target reassembler_overlapping
+[ 53%] Built target reassembler_win_sanitized
+[ 55%] Built target reassembler_win
+[ 56%] Built target wrapping_integers_cmp_sanitized
+[ 57%] Built target wrapping_integers_cmp
+[ 58%] Built target wrapping_integers_wrap_sanitized
+[ 60%] Built target wrapping_integers_wrap
+[ 61%] Built target wrapping_integers_unwrap_sanitized
+[ 62%] Built target wrapping_integers_unwrap
+[ 64%] Built target wrapping_integers_roundtrip_sanitized
+[ 65%] Built target wrapping_integers_roundtrip
+[ 65%] Built target wrapping_integers_extra_sanitized
+[ 66%] Built target wrapping_integers_extra
+[ 67%] Built target recv_connect_sanitized
+[ 67%] Built target recv_connect
+[ 69%] Built target recv_transmit_sanitized
+[ 70%] Built target recv_transmit
+[ 71%] Built target recv_window_sanitized
+[ 73%] Built target recv_window
+[ 74%] Built target recv_reorder_sanitized
+[ 75%] Built target recv_reorder
+[ 76%] Built target recv_reorder_more_sanitized
+[ 78%] Built target recv_reorder_more
+[ 79%] Built target recv_close_sanitized
+[ 80%] Built target recv_close
+[ 80%] Built target recv_special_sanitized
+[ 82%] Built target recv_special
+[ 83%] Built target send_connect_sanitized
+[ 84%] Built target send_connect
+[ 85%] Built target send_transmit_sanitized
+[ 87%] Built target send_transmit
+[ 88%] Built target send_retx_sanitized
+[ 89%] Built target send_retx
+[ 89%] Built target send_window_sanitized
+[ 91%] Built target send_window
+[ 92%] Built target send_ack_sanitized
+[ 93%] Built target send_ack
+[ 94%] Built target send_close_sanitized
+[ 96%] Built target send_close
+[ 97%] Built target send_extra_sanitized
+[ 97%] Built target send_extra
+[ 98%] Built target net_interface_sanitized
+[100%] Built target net_interface
+[100%] Built target router_sanitized
+[100%] Built target functionality_testing
+[  9%] Built target stream_copy
+[ 54%] Built target util_debug
+[ 90%] Built target minnow_debug
+[100%] Built target webget
+<end of output>
+Test time =   6.46 sec
+----------------------------------------------------------
+Test Passed.
+"compile with bug-checkers" end time: Sep 23 15:13 CST
+"compile with bug-checkers" time elapsed: 00:00:06
+----------------------------------------------------------
+
+2/39 Testing: t_webget
+2/39 Test: t_webget
+Command: "/tmp/minnow/tests/webget_t.sh" "/tmp/minnow/cmake-build-debug-docker"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"t_webget" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+/tmp/minnow/cmake-build-debug-docker/apps/webget
+Function called: get_URL(cs144.keithw.org, /nph-hasher/xyzzy)
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: text/plain
+
+7SmXqWkrLKzVBCEalbSPqBcvs11Pw263K7x4Wv3JckI
+<end of output>
+Test time =   1.16 sec
+----------------------------------------------------------
+Test Passed.
+"t_webget" end time: Sep 23 15:13 CST
+"t_webget" time elapsed: 00:00:01
+----------------------------------------------------------
+
+3/39 Testing: byte_stream_basics
+3/39 Test: byte_stream_basics
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/byte_stream_basics_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"byte_stream_basics" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_basics" end time: Sep 23 15:13 CST
+"byte_stream_basics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/39 Testing: byte_stream_capacity
+4/39 Test: byte_stream_capacity
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/byte_stream_capacity_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"byte_stream_capacity" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_capacity" end time: Sep 23 15:13 CST
+"byte_stream_capacity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/39 Testing: byte_stream_one_write
+5/39 Test: byte_stream_one_write
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/byte_stream_one_write_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"byte_stream_one_write" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_one_write" end time: Sep 23 15:13 CST
+"byte_stream_one_write" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/39 Testing: byte_stream_two_writes
+6/39 Test: byte_stream_two_writes
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/byte_stream_two_writes_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"byte_stream_two_writes" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_two_writes" end time: Sep 23 15:13 CST
+"byte_stream_two_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/39 Testing: byte_stream_many_writes
+7/39 Test: byte_stream_many_writes
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/byte_stream_many_writes_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"byte_stream_many_writes" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_many_writes" end time: Sep 23 15:13 CST
+"byte_stream_many_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/39 Testing: byte_stream_stress_test
+8/39 Test: byte_stream_stress_test
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/byte_stream_stress_test_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"byte_stream_stress_test" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_stress_test" end time: Sep 23 15:13 CST
+"byte_stream_stress_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/39 Testing: reassembler_single
+9/39 Test: reassembler_single
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/reassembler_single_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"reassembler_single" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_single" end time: Sep 23 15:13 CST
+"reassembler_single" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/39 Testing: reassembler_cap
+10/39 Test: reassembler_cap
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/reassembler_cap_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"reassembler_cap" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_cap" end time: Sep 23 15:13 CST
+"reassembler_cap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/39 Testing: reassembler_seq
+11/39 Test: reassembler_seq
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/reassembler_seq_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"reassembler_seq" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_seq" end time: Sep 23 15:13 CST
+"reassembler_seq" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/39 Testing: reassembler_dup
+12/39 Test: reassembler_dup
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/reassembler_dup_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"reassembler_dup" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_dup" end time: Sep 23 15:13 CST
+"reassembler_dup" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/39 Testing: reassembler_holes
+13/39 Test: reassembler_holes
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/reassembler_holes_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"reassembler_holes" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_holes" end time: Sep 23 15:13 CST
+"reassembler_holes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/39 Testing: reassembler_overlapping
+14/39 Test: reassembler_overlapping
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/reassembler_overlapping_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"reassembler_overlapping" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_overlapping" end time: Sep 23 15:13 CST
+"reassembler_overlapping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/39 Testing: reassembler_win
+15/39 Test: reassembler_win
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/reassembler_win_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"reassembler_win" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   7.03 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_win" end time: Sep 23 15:13 CST
+"reassembler_win" time elapsed: 00:00:07
+----------------------------------------------------------
+
+16/39 Testing: wrapping_integers_cmp
+16/39 Test: wrapping_integers_cmp
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/wrapping_integers_cmp_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"wrapping_integers_cmp" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_cmp" end time: Sep 23 15:13 CST
+"wrapping_integers_cmp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/39 Testing: wrapping_integers_wrap
+17/39 Test: wrapping_integers_wrap
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/wrapping_integers_wrap_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"wrapping_integers_wrap" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_wrap" end time: Sep 23 15:13 CST
+"wrapping_integers_wrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/39 Testing: wrapping_integers_unwrap
+18/39 Test: wrapping_integers_unwrap
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/wrapping_integers_unwrap_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"wrapping_integers_unwrap" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_unwrap" end time: Sep 23 15:13 CST
+"wrapping_integers_unwrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/39 Testing: wrapping_integers_roundtrip
+19/39 Test: wrapping_integers_roundtrip
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/wrapping_integers_roundtrip_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"wrapping_integers_roundtrip" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.17 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_roundtrip" end time: Sep 23 15:13 CST
+"wrapping_integers_roundtrip" time elapsed: 00:00:01
+----------------------------------------------------------
+
+20/39 Testing: wrapping_integers_extra
+20/39 Test: wrapping_integers_extra
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/wrapping_integers_extra_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"wrapping_integers_extra" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_extra" end time: Sep 23 15:13 CST
+"wrapping_integers_extra" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/39 Testing: recv_connect
+21/39 Test: recv_connect
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/recv_connect_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"recv_connect" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"recv_connect" end time: Sep 23 15:13 CST
+"recv_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/39 Testing: recv_transmit
+22/39 Test: recv_transmit
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/recv_transmit_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"recv_transmit" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.58 sec
+----------------------------------------------------------
+Test Passed.
+"recv_transmit" end time: Sep 23 15:13 CST
+"recv_transmit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/39 Testing: recv_window
+23/39 Test: recv_window
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/recv_window_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"recv_window" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"recv_window" end time: Sep 23 15:13 CST
+"recv_window" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/39 Testing: recv_reorder
+24/39 Test: recv_reorder
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/recv_reorder_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"recv_reorder" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"recv_reorder" end time: Sep 23 15:13 CST
+"recv_reorder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/39 Testing: recv_reorder_more
+25/39 Test: recv_reorder_more
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/recv_reorder_more_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"recv_reorder_more" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  13.82 sec
+----------------------------------------------------------
+Test Passed.
+"recv_reorder_more" end time: Sep 23 15:13 CST
+"recv_reorder_more" time elapsed: 00:00:13
+----------------------------------------------------------
+
+26/39 Testing: recv_close
+26/39 Test: recv_close
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/recv_close_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"recv_close" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"recv_close" end time: Sep 23 15:13 CST
+"recv_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/39 Testing: recv_special
+27/39 Test: recv_special
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/recv_special_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"recv_special" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"recv_special" end time: Sep 23 15:13 CST
+"recv_special" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/39 Testing: send_connect
+28/39 Test: send_connect
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/send_connect_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"send_connect" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"send_connect" end time: Sep 23 15:13 CST
+"send_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/39 Testing: send_transmit
+29/39 Test: send_transmit
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/send_transmit_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"send_transmit" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.61 sec
+----------------------------------------------------------
+Test Passed.
+"send_transmit" end time: Sep 23 15:13 CST
+"send_transmit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/39 Testing: send_retx
+30/39 Test: send_retx
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/send_retx_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"send_retx" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"send_retx" end time: Sep 23 15:13 CST
+"send_retx" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/39 Testing: send_window
+31/39 Test: send_window
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/send_window_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"send_window" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"send_window" end time: Sep 23 15:13 CST
+"send_window" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/39 Testing: send_ack
+32/39 Test: send_ack
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/send_ack_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"send_ack" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"send_ack" end time: Sep 23 15:13 CST
+"send_ack" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/39 Testing: send_close
+33/39 Test: send_close
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/send_close_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"send_close" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"send_close" end time: Sep 23 15:13 CST
+"send_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/39 Testing: send_extra
+34/39 Test: send_extra
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/send_extra_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"send_extra" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Passed.
+"send_extra" end time: Sep 23 15:13 CST
+"send_extra" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/39 Testing: net_interface
+35/39 Test: net_interface
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/net_interface_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"net_interface" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+DEBUG: Network interface has Ethernet address 56:b2:c8:c6:2c:21 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 26:66:04:e0:98:49 and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 26:ed:0e:2b:9a:bd and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 4e:d4:a2:e1:2e:6a and IP address 1.2.3.4
+DEBUG: Network interface has Ethernet address 32:66:16:8f:97:2f and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 02:95:4f:1c:1f:d2 and IP address 10.0.0.1
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"net_interface" end time: Sep 23 15:13 CST
+"net_interface" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/39 Testing: router
+36/39 Test: router
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/router_sanitized"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"router" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+[32;1mConstructing network.[m
+DEBUG: Network interface has Ethernet address 02:00:00:63:c9:07 and IP address 171.67.76.46
+DEBUG: Network interface has Ethernet address 02:00:00:6b:f4:de and IP address 10.0.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:d6:a6:63 and IP address 172.16.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:16:95:6d and IP address 192.168.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:4e:c2:d5 and IP address 198.178.229.1
+DEBUG: Network interface has Ethernet address 02:00:00:d2:0d:34 and IP address 143.195.0.2
+DEBUG: Network interface has Ethernet address 02:00:00:f0:cd:52 and IP address 128.30.76.255
+DEBUG: Network interface has Ethernet address 82:7c:1e:7b:b0:93 and IP address 10.0.0.2
+DEBUG: Network interface has Ethernet address 0a:c4:42:13:35:71 and IP address 171.67.76.1
+DEBUG: Network interface has Ethernet address 82:48:32:18:44:f7 and IP address 192.168.0.2
+DEBUG: Network interface has Ethernet address 1e:47:a7:74:af:a0 and IP address 143.195.0.1
+DEBUG: Network interface has Ethernet address ca:43:3b:91:a7:91 and IP address 198.178.229.42
+DEBUG: Network interface has Ethernet address 9e:5e:f5:6d:af:bb and IP address 198.178.229.43
+DEBUG: adding route 0.0.0.0/0 => 171.67.76.1 on interface 0
+DEBUG: adding route 10.0.0.0/8 => (direct) on interface 1
+DEBUG: adding route 172.16.0.0/16 => (direct) on interface 2
+DEBUG: adding route 192.168.0.0/24 => (direct) on interface 3
+DEBUG: adding route 198.178.229.0/24 => (direct) on interface 4
+DEBUG: adding route 143.195.0.0/17 => 143.195.0.1 on interface 5
+DEBUG: adding route 143.195.128.0/18 => 143.195.0.1 on interface 5
+DEBUG: adding route 143.195.192.0/19 => 143.195.0.1 on interface 5
+DEBUG: adding route 128.30.76.255/16 => 128.30.0.1 on interface 6
+[32;1m
+
+Testing traffic between two ordinary hosts (applesauce to cherrypie)...[m
+
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 protocol=6 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 524"
+Transferring frame from applesauce to eth0: dst=ff:ff:ff:ff:ff:ff src=82:7c:1e:7b:b0:93 type=ARP payload: opcode=REQUEST, sender=82:7c:1e:7b:b0:93/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from eth0 to applesauce: dst=82:7c:1e:7b:b0:93 src=02:00:00:6b:f4:de type=ARP payload: opcode=REPLY, sender=02:00:00:6b:f4:de/10.0.0.1, target=82:7c:1e:7b:b0:93/10.0.0.2
+Transferring frame from applesauce to eth0: dst=02:00:00:6b:f4:de src=82:7c:1e:7b:b0:93 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 524"
+Transferring frame from eth2 to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:00:00:16:95:6d type=ARP payload: opcode=REQUEST, sender=02:00:00:16:95:6d/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from cherrypie to eth2: dst=02:00:00:16:95:6d src=82:48:32:18:44:f7 type=ARP payload: opcode=REPLY, sender=82:48:32:18:44:f7/192.168.0.2, target=02:00:00:16:95:6d/192.168.0.1
+Transferring frame from eth2 to cherrypie: dst=82:48:32:18:44:f7 src=02:00:00:16:95:6d type=IPv4 payload: IPv4 len=32 protocol=6 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 524"
+[32;1m
+
+Testing traffic between two ordinary hosts (cherrypie to applesauce)...[m
+
+Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=32 protocol=6 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 571"
+Transferring frame from cherrypie to eth2: dst=02:00:00:16:95:6d src=82:48:32:18:44:f7 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 571"
+Transferring frame from eth0 to applesauce: dst=82:7c:1e:7b:b0:93 src=02:00:00:6b:f4:de type=IPv4 payload: IPv4 len=32 protocol=6 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 571"
+[32;1m
+
+Success! Testing applesauce sending to the Internet.[m
+
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 protocol=6 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 693"
+Transferring frame from applesauce to eth0: dst=02:00:00:6b:f4:de src=82:7c:1e:7b:b0:93 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 693"
+Transferring frame from default to default_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:63:c9:07 type=ARP payload: opcode=REQUEST, sender=02:00:00:63:c9:07/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default_router to default: dst=02:00:00:63:c9:07 src=0a:c4:42:13:35:71 type=ARP payload: opcode=REPLY, sender=0a:c4:42:13:35:71/171.67.76.1, target=02:00:00:63:c9:07/171.67.76.46
+Transferring frame from default to default_router: dst=0a:c4:42:13:35:71 src=02:00:00:63:c9:07 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 693"
+[32;1m
+
+Success! Testing sending to the HS network and Internet.[m
+
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 protocol=6 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 854"
+Transferring frame from applesauce to eth0: dst=02:00:00:6b:f4:de src=82:7c:1e:7b:b0:93 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 854"
+Transferring frame from hs4 to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d2:0d:34 type=ARP payload: opcode=REQUEST, sender=02:00:00:d2:0d:34/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs_router to hs4: dst=02:00:00:d2:0d:34 src=1e:47:a7:74:af:a0 type=ARP payload: opcode=REPLY, sender=1e:47:a7:74:af:a0/143.195.0.1, target=02:00:00:d2:0d:34/143.195.0.2
+Transferring frame from hs4 to hs_router: dst=1e:47:a7:74:af:a0 src=02:00:00:d2:0d:34 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 854"
+Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=31 protocol=6 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 17"
+Transferring frame from cherrypie to eth2: dst=02:00:00:16:95:6d src=82:48:32:18:44:f7 type=IPv4 payload: IPv4 len=31 protocol=6 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 17"
+Transferring frame from hs4 to hs_router: dst=1e:47:a7:74:af:a0 src=02:00:00:d2:0d:34 type=IPv4 payload: IPv4 len=31 protocol=6 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 17"
+Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=32 protocol=6 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 129"
+Transferring frame from cherrypie to eth2: dst=02:00:00:16:95:6d src=82:48:32:18:44:f7 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 129"
+Transferring frame from hs4 to hs_router: dst=1e:47:a7:74:af:a0 src=02:00:00:d2:0d:34 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 129"
+Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=32 protocol=6 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 496"
+Transferring frame from cherrypie to eth2: dst=02:00:00:16:95:6d src=82:48:32:18:44:f7 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 496"
+Transferring frame from default to default_router: dst=0a:c4:42:13:35:71 src=02:00:00:63:c9:07 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 496"
+[32;1m
+
+Success! Testing two hosts on the same network (dm42 to dm43)...[m
+
+Host dm42 trying to send datagram (with next hop = 198.178.229.1): IPv4 len=32 protocol=6 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 273"
+Transferring frame from dm42 to uun3: dst=ff:ff:ff:ff:ff:ff src=ca:43:3b:91:a7:91 type=ARP payload: opcode=REQUEST, sender=ca:43:3b:91:a7:91/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from uun3 to dm42: dst=ca:43:3b:91:a7:91 src=02:00:00:4e:c2:d5 type=ARP payload: opcode=REPLY, sender=02:00:00:4e:c2:d5/198.178.229.1, target=ca:43:3b:91:a7:91/198.178.229.42
+Transferring frame from dm42 to uun3: dst=02:00:00:4e:c2:d5 src=ca:43:3b:91:a7:91 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 273"
+Transferring frame from dm42 to dm43: dst=02:00:00:4e:c2:d5 src=ca:43:3b:91:a7:91 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 273"
+Transferring frame from uun3 to dm43: dst=ca:43:3b:91:a7:91 src=02:00:00:4e:c2:d5 type=ARP payload: opcode=REPLY, sender=02:00:00:4e:c2:d5/198.178.229.1, target=ca:43:3b:91:a7:91/198.178.229.42
+Transferring frame from dm42 to dm43: dst=ff:ff:ff:ff:ff:ff src=ca:43:3b:91:a7:91 type=ARP payload: opcode=REQUEST, sender=ca:43:3b:91:a7:91/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from uun3 to dm42: dst=ff:ff:ff:ff:ff:ff src=02:00:00:4e:c2:d5 type=ARP payload: opcode=REQUEST, sender=02:00:00:4e:c2:d5/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from uun3 to dm43: dst=ff:ff:ff:ff:ff:ff src=02:00:00:4e:c2:d5 type=ARP payload: opcode=REQUEST, sender=02:00:00:4e:c2:d5/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from dm43 to uun3: dst=02:00:00:4e:c2:d5 src=9e:5e:f5:6d:af:bb type=ARP payload: opcode=REPLY, sender=9e:5e:f5:6d:af:bb/198.178.229.43, target=02:00:00:4e:c2:d5/198.178.229.1
+Transferring frame from uun3 to dm42: dst=9e:5e:f5:6d:af:bb src=02:00:00:4e:c2:d5 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 273"
+Transferring frame from uun3 to dm43: dst=9e:5e:f5:6d:af:bb src=02:00:00:4e:c2:d5 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 273"
+Transferring frame from dm43 to dm42: dst=02:00:00:4e:c2:d5 src=9e:5e:f5:6d:af:bb type=ARP payload: opcode=REPLY, sender=9e:5e:f5:6d:af:bb/198.178.229.43, target=02:00:00:4e:c2:d5/198.178.229.1
+[32;1m
+
+Success! Testing TTL expiration...[m
+
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 protocol=6 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 813"
+Transferring frame from applesauce to eth0: dst=02:00:00:6b:f4:de src=82:7c:1e:7b:b0:93 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 813"
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 protocol=6 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 556"
+Transferring frame from applesauce to eth0: dst=02:00:00:6b:f4:de src=82:7c:1e:7b:b0:93 type=IPv4 payload: IPv4 len=32 protocol=6 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 556"
+
+
+[32;1mCongratulations! All datagrams were routed successfully.[m
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"router" end time: Sep 23 15:13 CST
+"router" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/39 Testing: compile with optimization
+37/39 Test: compile with optimization
+Command: "/usr/bin/cmake" "--build" "/tmp/minnow/cmake-build-debug-docker" "-t" "speed_testing"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"compile with optimization" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+[ 33%] Built target minnow_optimized
+[ 83%] Built target util_optimized
+[ 91%] Built target reassembler_speed_test
+[100%] Built target byte_stream_speed_test
+[100%] Built target speed_testing
+<end of output>
+Test time =   0.84 sec
+----------------------------------------------------------
+Test Passed.
+"compile with optimization" end time: Sep 23 15:13 CST
+"compile with optimization" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/39 Testing: byte_stream_speed_test
+38/39 Test: byte_stream_speed_test
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/byte_stream_speed_test"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"byte_stream_speed_test" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+ByteStream with capacity=32768, write_size=1500, read_size=128 reached 2.88 Gbit/s.
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_speed_test" end time: Sep 23 15:13 CST
+"byte_stream_speed_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/39 Testing: reassembler_speed_test
+39/39 Test: reassembler_speed_test
+Command: "/tmp/minnow/cmake-build-debug-docker/tests/reassembler_speed_test"
+Directory: /tmp/minnow/cmake-build-debug-docker
+"reassembler_speed_test" start time: Sep 23 15:13 CST
+Output:
+----------------------------------------------------------
+Reassembler to ByteStream with capacity=1500 reached 0.11 Gbit/s.
+<end of output>
+Test time =   1.34 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_speed_test" end time: Sep 23 15:13 CST
+"reassembler_speed_test" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Sep 23 15:13 CST

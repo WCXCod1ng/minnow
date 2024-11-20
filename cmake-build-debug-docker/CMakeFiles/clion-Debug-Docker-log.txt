@@ -1,0 +1,5 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /tmp/minnow -B /tmp/minnow/cmake-build-debug-docker
+-- Building in 'Debug' mode.
+-- Configuring done (12.8s)
+-- Generating done (5.6s)
+-- Build files have been written to: /tmp/minnow/cmake-build-debug-docker

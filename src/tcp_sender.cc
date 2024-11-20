@@ -166,7 +166,6 @@ void TCPSender::receive( const TCPReceiverMessage& msg )
   window_left_bound_ = msg.ackno.value();
   window_size_ = msg.window_size;
   // 更新outstanding data的数量，也就是ackno之后的，next_seqno_之前的所有（注意是累计确认机制）
-  sequence_numbers_in_flight_ = next_seqno_.unwrap(isn_, 0) - window_left_bound_.unwrap(isn_, 0);// 还得要考虑考虑
 
   bool isAckNewData {false};
 
@@ -181,6 +180,11 @@ void TCPSender::receive( const TCPReceiverMessage& msg )
     outstanding_segments_.erase(outstanding_segments_.begin(), ++target_iter);
     isAckNewData = true;
   }
+
+  if(isAckNewData) {
+    sequence_numbers_in_flight_ = next_seqno_.unwrap(isn_, 0) - window_left_bound_.unwrap(isn_, 0);// 还得要考虑考虑
+  }
+
   // cout << "outstanding size:" << outstanding_segments_.size() << endl;
 
   // 5.When all outstanding data has been acknowledged, stop the retransmission timer
@@ -203,11 +207,11 @@ void TCPSender::tick( uint64_t ms_since_last_tick, const TransmitFunction& trans
   // 更新生存时间
   alive_ms_ += ms_since_last_tick;
 
-  cout << "tick 被调用，当前已经经过" << alive_ms_ << endl;
+  // cout << "tick 被调用，当前已经经过" << alive_ms_ << endl;
 
   // 6. If tick is called and the retransmission timer has expired
   if(retransmission_timer_.expired( alive_ms_ )) {
-    cout << "retransmission timeout" << endl;
+    // cout << "retransmission timeout" << endl;
     // a.
     if(!outstanding_segments_.empty()) {
       transmit( outstanding_segments_.front() );
@@ -254,7 +258,7 @@ void TCPSender::RetransmissionTimer::restart(uint64_t start_time, uint64_t timeo
 }
 
 bool TCPSender::RetransmissionTimer::expired(const uint64_t now ) const{
-  cout << is_running() << " "  << now << " " << start_time_ << " " << timeout_ << endl;
+  // cout << is_running() << " "  << now << " " << start_time_ << " " << timeout_ << endl;
   return is_running() && now >= start_time_ + timeout_;
 }
 

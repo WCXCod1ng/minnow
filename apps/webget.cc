@@ -5,14 +5,13 @@
 #include <span>
 #include <string>
 #include <format>
-#include "tcp_minnow_socket.hh"
 
 using namespace std;
 
 void get_URL( const string& host, const string& path )
 {
   cerr << "Function called: get_URL(" << host << ", " << path << ")\n";
-  CS144TCPSocket sock{};
+  TCPSocket sock{};
   Address address{host, "http"};
   sock.connect( address );
   string request = format("GET {} HTTP/1.1\r\nHost:{}\r\nConnection:close\r\n\r\n", path, host);

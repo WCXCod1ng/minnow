@@ -35,4 +35,19 @@ public:
 private:
   // The router's collection of network interfaces
   std::vector<std::shared_ptr<NetworkInterface>> _interfaces {};
+
+  // a forwarding rule
+  struct Rule {
+    uint32_t route_prefix;
+    uint8_t prefix_length;
+    std::optional<Address> next_hop;
+    size_t interface_num;
+    Rule( uint32_t route_prefix_, uint8_t prefix_length_, std::optional<Address> next_hop_, size_t interface_num_ ): route_prefix( route_prefix_ ), prefix_length( prefix_length_ ), next_hop( next_hop_ ), interface_num( interface_num_ ) {}
+  };
+  // 存储路由表，是一个vector，存储所有的路由规则
+  std::vector<Rule> _rules {};
+
+  // 辅助函数：看是否能够匹配
+  // 查看传入的ip_address是否能够与规则i匹配
+  [[nodiscard]] bool check_match(std::vector<Rule>::const_iterator it, uint32_t ip_address)const;
 };
